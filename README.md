@@ -27,3 +27,90 @@ string url = string.Format(
     speaker
 );
 ```
+
+## 2. Establish a socket connection
+
+To establish a connection to the Phebi-Live WebSocket you have to provide the subscription key 'Subscription' in the request headers.
+
+```
+// Create a new websocket client.
+ClientWebSocket socket = new ClientWebSocket();
+
+// Add the phebi subscription key to the request headers.
+socket.Options.SetRequestHeader("Subscription", subscriptionKey);
+
+// Connect to the websocket.
+await socket.ConnectAsync(new Uri(url), CancellationToken.None);
+```
+
+## 3. Receiving data from the socket
+
+```
+private async Task OnResponse(ClientWebSocket socket)
+{
+    // Create a new 10kb buffer.
+    byte[] buffer = new byte[10240];
+
+    WebSocketReceiveResult result;
+    string responseString;
+    PhebiResponse response;
+
+    // Recieve while the socket is open.
+    while (socket.State == WebSocketState.Open)
+    {
+        // Recieve a response from the phebi websocket.
+        result = await socket.ReceiveAsync(buffer, CancellationToken.None);
+
+        // Decode the utf-8 response.
+        responseString = System.Text.Encoding.UTF8.GetString(buffer, 0, result.Count);
+
+        Console.WriteLine(responseString);
+
+        // Deserialize the response string.
+        response = JsonConvert.DeserializeObject<PhebiResponse>(responseString);
+    }
+}
+```
+
+## 4. Sending audio data to the socket
+
+The Phebi-Live WebSocket requires wave RIFF audio data with 16k sample rate, 16 bits per sample and 1 audio channel.
+
+```
+// Read the sample wave file.
+byte[] buffer = File.ReadAllBytes("test.wav");
+
+int i = 0;
+while (i < buffer.Length)
+{
+    // Send 10kb of the buffer to the websocket.
+    await socket.SendAsync(
+        buffer[i..Math.Min(i + 10240, buffer.Length)],
+        WebSocketMessageType.Binary,
+        false,
+        CancellationToken.None
+    );
+
+    i += 10240;
+
+    // Wait 10ms.
+    Task.Delay(10).Wait();
+}
+```
+
+## 5. Ending the transmission
+
+When the Live session has ended, we need to tell Phebi-Live that' we're at the end of the file and we need the last final transcription.
+If we close the session now, without sending the EOF message, the final transcription will not be sent to the client.
+
+The EOF message is a single byte with value 1.
+
+```
+// Send EOF message.
+await socket.SendAsync(
+    new byte[] { 1 },
+    WebSocketMessageType.Binary,
+    false,
+    CancellationToken.None
+);
+```
