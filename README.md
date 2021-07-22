@@ -5,11 +5,11 @@ The Phebi-Live does not support speaker diarization, it is highly recommended to
 
 ## 1. The socket endpoint
 
-*The url to the Phebi-Live socket consists of
-*The host, your own environment and analysis portal (provided to you by Phebi)
-*The project name, where the live session should be saved to
-*The session (appears as respondent-id in the analysis portal)
-*The speaker (respondent, moderator etc.)
+* The url to the Phebi-Live socket consists of
+* The host, your own environment and analysis portal (provided to you by Phebi)
+* The project name, where the live session should be saved to
+* The session (appears as respondent-id in the analysis portal)
+* The speaker (respondent, moderator etc.)
 
 
 ```
