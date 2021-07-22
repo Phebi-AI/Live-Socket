@@ -1,0 +1,16 @@
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\LiveSocketExample.exe
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\test.wav
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\LiveSocketExample.deps.json
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\LiveSocketExample.runtimeconfig.json
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\LiveSocketExample.runtimeconfig.dev.json
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\LiveSocketExample.dll
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\LiveSocketExample.pdb
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.AssemblyInfoInputs.cache
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.AssemblyInfo.cs
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.csproj.CoreCompileInputs.cache
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.dll
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.pdb
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.genruntimeconfig.cache
+P:\Phebi3\Source\Tools\LiveSocketExample\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.csproj.CopyComplete
+P:\Phebi3\Source\Tools\LiveSocketExample\obj\Debug\netcoreapp3.1\LiveSocketExample.csproj.AssemblyReference.cache

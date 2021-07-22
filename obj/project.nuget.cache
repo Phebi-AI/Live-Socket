@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EQUVxjyQBRVL/9BePwKW6QTaUBo1JNCGtgAYoBO+a3EIRdLxdu+hD/E/eVBThQYTwyyf9LCM+ZUgWL2uRBVM5A==",
+  "success": true,
+  "projectFilePath": "P:\\Phebi3\\Github\\Live-Socket-CSharp\\LiveSocketExample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kmorj\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
