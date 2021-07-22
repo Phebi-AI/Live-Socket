@@ -1,7 +1,7 @@
 # Phebi-Live WebSocket Endpoint (C#)
 The Phebi-Live WebSocket Endpoint is to enable 3rd party Applications access to Phebi's realtime emotion analysis and speech-to-text transcription.
 
-The Phebi-Live does not support speaker diarization, it is highly recommended to have a separate socket and audio stream per speaker to ensure capturing the correct emotions for respondents.
+Phebi-Live does not support speaker diarization, it is highly recommended to have a separate socket and audio stream per speaker to ensure capturing the correct emotions for respondents.
 
 ## 1. The socket endpoint
 
