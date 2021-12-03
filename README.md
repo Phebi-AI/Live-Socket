@@ -72,6 +72,30 @@ private async Task OnResponse(ClientWebSocket socket)
 }
 ```
 
+A response would look like this:
+```
+{ 
+    "Transcription": [
+        {
+            "Position": 0.1,
+            "Duration": 20.13,
+            "Text": "This",
+            "Speaker": 0
+        }
+    ],
+    "InterimTranscription":"this is a number 15,476,521", 
+    "Emotions":[
+        {
+            "Confidence":0.6080625666666667,
+            "Scores":[0.78,0.0,0.0,0.22,0.0],
+            "Speaker":0,
+            "Position":0,
+            "ByteLength":6
+        }
+    ]
+}
+```
+
 ## 4. Sending audio data to the socket
 
 The Phebi-Live WebSocket requires wave RIFF audio data with 16k sample rate, 16 bits per sample and 1 audio channel.
