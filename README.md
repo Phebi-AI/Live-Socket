@@ -78,7 +78,7 @@ A response would look like this:
     "Transcription": [
         {
             "Position": 0.1,
-            "Duration": 20.13,
+            "Duration": 1.13,
             "Text": "This",
             "Speaker": 0
         }
