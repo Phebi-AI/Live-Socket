@@ -86,11 +86,10 @@ A response would look like this:
     "InterimTranscription":"this is a number 15,476,521", 
     "Emotions":[
         {
-            "Confidence":0.6080625666666667,
-            "Scores":[0.78,0.0,0.0,0.22,0.0],
-            "Speaker":0,
-            "Position":0,
-            "ByteLength":6
+            "Confidence": 0.6080625666666667,
+            "Scores": [0.78,0.0,0.0,0.22,0.0],
+            "Speaker": 0,
+            "Position": 0
         }
     ]
 }
